@@ -11,32 +11,56 @@
 
 // Principle 1
 
-function screamName(name) {
-    console.log(this);
-    return name;
-}
-screamName('Justin')
+// function screamName(name) {
+//     console.log(this);
+//     return name;
+// }
+// screamName('Justin')
 
 // code example for Window Binding
 
 // Principle 2
 
-const justinObj = {
-    greeting: 'Hola',
-    screamHello: function (name) {
-        console.log(`${this.greeting} my name is ${name}`);
-        console.log(this);
-    }
-};
+// const justinObj = {
+//     greeting: 'Hola',
+//     screamHello: function (name) {
+//         console.log(`${this.greeting} my name is ${name}`);
+//         console.log(this);
+//     }
+// };
 
-justinObj.screamHello('justin');
+// justinObj.screamHello('justin');
 
 // code example for Implicit Binding
 
 // Principle 3
 
+// function CordialPerson(greeter) {
+//     this.greeting = 'Hola ';
+//     this.greeter = greeter;
+//     this.speak = function () {
+//         console.log(this.greeting + this.greeter);
+//         console.log(this);
+//     };
+// }
+
+// const jerry = new CordialPerson('Newman');
+// const newman = new CordialPerson('Jerry');
+
+// jerry.speak();
+// newman.speak();
+
 // code example for New Binding
 
 // Principle 4
+
+function poo() {
+    console.log(this.name);
+}
+var dog = {
+    name: 'Ryder'
+}
+
+greet.call(person, arg1, arg2, arg3)
 
 // code example for Explicit Binding
