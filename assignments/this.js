@@ -54,13 +54,14 @@
 
 // Principle 4
 
-function poo() {
+function greet() {
     console.log(this.name);
 }
-var dog = {
+var person = {
     name: 'Ryder'
 }
 
-greet.call(person, arg1, arg2, arg3)
+var greetPerson = greet.bind(person);
+greetPerson();
 
 // code example for Explicit Binding
